@@ -1,0 +1,82 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: hsl(215, 50%, 80%);
+}
+
+.my-img {
+    width: 500px;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: top;
+    box-shadow: -1px 1px 12px 4px black;
+}
+
+.my-img:hover {
+    transform: rotate(360deg);
+}
+
+.rotate {
+    animation: rotate 10s infinite linear;
+}
+
+@keyframes rotate {
+    0% {
+        rotate: 0deg;
+    }
+    10% {
+        rotate: 36deg;
+    }
+    20% {
+        rotate: 72deg;
+    }
+    30% {
+        rotate: 108deg;
+    }
+    40% {
+        rotate: 144deg;
+    }
+    50% {
+        rotate: 180deg;
+    }
+    60% {
+        rotate: 216deg;
+    }
+    70% {
+        rotate: 252deg;
+    }
+    80% {
+        rotate: 288deg;
+    }
+    90% {
+        rotate: 324deg;
+    }
+    100% {
+        rotate: 360deg;
+    }
+}
+
+#playButton {
+    width: 200px;
+    font-size: 2.2rem;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background-color: transparent;
+    filter: blur(2px);
+    transition: all 0.5s ease;
+}
+
+#playButton:hover {
+    cursor: pointer;
+    filter: blur(0);
+}
