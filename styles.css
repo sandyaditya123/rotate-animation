@@ -16,14 +16,7 @@
 .my-img {
     width: 500px;
     border-radius: 50%;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-    object-position: top;
     box-shadow: -1px 1px 12px 4px black;
-}
-
-.my-img:hover {
-    transform: rotate(360deg);
 }
 
 .rotate {
@@ -67,16 +60,36 @@
 }
 
 #playButton {
-    width: 200px;
     font-size: 2.2rem;
-    margin-top: 1rem;
-    padding: 0.5rem;
+    margin-top: 1.5rem;
+    padding: 0.5rem 3rem;
     background-color: transparent;
-    filter: blur(2px);
+    /* filter: blur(2px); */
     transition: all 0.5s ease;
 }
 
 #playButton:hover {
     cursor: pointer;
     filter: blur(0);
+}
+
+@media screen and (max-width: 768px) {
+    .my-img {
+        width: 400px;
+    }
+
+    #playButton {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .my-img {
+        width: 300px;
+    }
+
+    #playButton {
+        font-size: 1.5rem;
+        padding: 0.25rem 2rem;
+    }
 }
